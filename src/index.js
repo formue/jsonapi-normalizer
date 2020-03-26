@@ -36,13 +36,14 @@ function addResult (result, entity) {
 }
 
 function addEntity (entities, entity) {
-  const { type, id, attributes } = entity
+  const { type, id, attributes, meta } = entity
 
   if (!entities[type]) entities[type] = {}
 
   entities[type][id] = {
     id,
     ...attributes,
+    ...meta,
     ...extractRelationships(entity)
   }
 

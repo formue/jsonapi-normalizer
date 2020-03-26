@@ -3,6 +3,9 @@ export default {
     data: [{
       type: 'articles',
       id: '1',
+      meta: {
+        foo: 'bar'
+      },
       attributes: {
         title: 'title',
         body: 'body'
@@ -19,7 +22,8 @@ export default {
         '1': {
           id: '1',
           title: 'title',
-          body: 'body'
+          body: 'body',
+          foo: 'bar'
         }
       }
     }
